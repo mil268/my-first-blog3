@@ -10,6 +10,7 @@
               <p> publicado: {{ post.published_date }}</p>
              </div>
               <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+              <a href="{% url 'post_detail' pk=post.pk %}">Comentarios: {{ post.approved_comments.count }}</a>
               
            </div>
 
