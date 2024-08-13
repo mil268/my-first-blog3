@@ -16,13 +16,26 @@
 <body>
         <div class="page-header">
           {% if user.is_authenticated %}
+          <div>
           <a href="{% url 'post_new'  %}" class="top_menu"><span class="glyphicon glyphicon-plus"></span></a>
+          
+          
           <a href="{% url 'post_draft_list' %}" class="top_menu"><span class="glyphicon glyphicon-edit"></span></a>
-          <p class="top-menu">Hola!!! {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+          
+          </div>
+        
+          <p id="pa" class="top-menu">Hola!!! {{ user.username }} (<a href="{% url 'logout' %}">Log out</a>)</p>
           {% else %}
           <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
           {% endif %}
-            <h1><a href="/">Django Blog</a></h1>
+            <a  href="/"><img class="mil" src="{% static 'img/milton.jpg' %}" alt="Mi imagen"></a>
+           <span class="mil1">
+             El blog
+
+             de Milton
+
+
+           </span>
         </div>
 
         <div class="content container">
